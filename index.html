@@ -7,6 +7,32 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+	  <style>image-container {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
+
+.text-overlay h2 {
+  margin: 0;
+}
+
+.image-container img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(50% + 30px));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(50% + 30px));
+}</style>
   </head>
   <body>
     <main>
@@ -46,7 +72,13 @@ clear: left;
 
         	</div>
     
-	    </header 
+	    </header>
+	    <div class="image-container">
+  <img src="your-image.jpg" alt="Your Image">
+  <div class="text-overlay">
+    <h2>Your Text</h2>
+  </div>
+</div>
     </main>
 	
   </body>
